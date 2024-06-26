@@ -40,6 +40,13 @@ namespace CarRentalApp {
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dropDown_DropOffTime = new System.Windows.Forms.ComboBox();
+            this.errorText_FirstName = new System.Windows.Forms.Label();
+            this.errorText_LastName = new System.Windows.Forms.Label();
+            this.errorText_PickupDate = new System.Windows.Forms.Label();
+            this.errorText_PickUpTime = new System.Windows.Forms.Label();
+            this.errorText_DropOffTime = new System.Windows.Forms.Label();
+            this.errorText_VehicleType = new System.Windows.Forms.Label();
+            this.errorText_DropOffDate = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -90,7 +97,7 @@ namespace CarRentalApp {
             // 
             // datePicker_PickupDate
             // 
-            this.datePicker_PickupDate.Location = new System.Drawing.Point(16, 180);
+            this.datePicker_PickupDate.Location = new System.Drawing.Point(16, 187);
             this.datePicker_PickupDate.Name = "datePicker_PickupDate";
             this.datePicker_PickupDate.Size = new System.Drawing.Size(200, 20);
             this.datePicker_PickupDate.TabIndex = 5;
@@ -99,7 +106,7 @@ namespace CarRentalApp {
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 157);
+            this.label4.Location = new System.Drawing.Point(12, 164);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 20);
             this.label4.TabIndex = 6;
@@ -109,7 +116,7 @@ namespace CarRentalApp {
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 212);
+            this.label5.Location = new System.Drawing.Point(13, 237);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(175, 20);
             this.label5.TabIndex = 8;
@@ -117,7 +124,7 @@ namespace CarRentalApp {
             // 
             // datePicker_DropOffDate
             // 
-            this.datePicker_DropOffDate.Location = new System.Drawing.Point(17, 235);
+            this.datePicker_DropOffDate.Location = new System.Drawing.Point(17, 260);
             this.datePicker_DropOffDate.Name = "datePicker_DropOffDate";
             this.datePicker_DropOffDate.Size = new System.Drawing.Size(200, 20);
             this.datePicker_DropOffDate.TabIndex = 7;
@@ -132,7 +139,7 @@ namespace CarRentalApp {
             "Hyundai Sonata",
             "Nissan Altima",
             "Toyota Corolla"});
-            this.dropDown_Vehicles.Location = new System.Drawing.Point(17, 301);
+            this.dropDown_Vehicles.Location = new System.Drawing.Point(17, 327);
             this.dropDown_Vehicles.Name = "dropDown_Vehicles";
             this.dropDown_Vehicles.Size = new System.Drawing.Size(199, 21);
             this.dropDown_Vehicles.TabIndex = 9;
@@ -141,7 +148,7 @@ namespace CarRentalApp {
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 278);
+            this.label6.Location = new System.Drawing.Point(13, 304);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(169, 20);
             this.label6.TabIndex = 10;
@@ -150,7 +157,7 @@ namespace CarRentalApp {
             // button_Submit
             // 
             this.button_Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Submit.Location = new System.Drawing.Point(17, 374);
+            this.button_Submit.Location = new System.Drawing.Point(17, 393);
             this.button_Submit.Name = "button_Submit";
             this.button_Submit.Size = new System.Drawing.Size(131, 36);
             this.button_Submit.TabIndex = 11;
@@ -175,7 +182,7 @@ namespace CarRentalApp {
             "11:30 AM",
             "12:00 PM",
             ""});
-            this.dropDown_PickupTime.Location = new System.Drawing.Point(240, 178);
+            this.dropDown_PickupTime.Location = new System.Drawing.Point(240, 185);
             this.dropDown_PickupTime.Name = "dropDown_PickupTime";
             this.dropDown_PickupTime.Size = new System.Drawing.Size(121, 21);
             this.dropDown_PickupTime.TabIndex = 12;
@@ -184,7 +191,7 @@ namespace CarRentalApp {
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(236, 157);
+            this.label7.Location = new System.Drawing.Point(236, 164);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(105, 20);
             this.label7.TabIndex = 13;
@@ -194,7 +201,7 @@ namespace CarRentalApp {
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(236, 212);
+            this.label8.Location = new System.Drawing.Point(236, 237);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(118, 20);
             this.label8.TabIndex = 15;
@@ -217,16 +224,101 @@ namespace CarRentalApp {
             "11:30 AM",
             "12:00 PM",
             ""});
-            this.dropDown_DropOffTime.Location = new System.Drawing.Point(240, 233);
+            this.dropDown_DropOffTime.Location = new System.Drawing.Point(240, 258);
             this.dropDown_DropOffTime.Name = "dropDown_DropOffTime";
             this.dropDown_DropOffTime.Size = new System.Drawing.Size(121, 21);
             this.dropDown_DropOffTime.TabIndex = 14;
+            // 
+            // errorText_FirstName
+            // 
+            this.errorText_FirstName.AutoSize = true;
+            this.errorText_FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorText_FirstName.ForeColor = System.Drawing.Color.Red;
+            this.errorText_FirstName.Location = new System.Drawing.Point(14, 145);
+            this.errorText_FirstName.Name = "errorText_FirstName";
+            this.errorText_FirstName.Size = new System.Drawing.Size(38, 13);
+            this.errorText_FirstName.TabIndex = 16;
+            this.errorText_FirstName.Text = "Label";
+            this.errorText_FirstName.Click += new System.EventHandler(this.errorText_FirstName_Click);
+            // 
+            // errorText_LastName
+            // 
+            this.errorText_LastName.AutoSize = true;
+            this.errorText_LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorText_LastName.ForeColor = System.Drawing.Color.Red;
+            this.errorText_LastName.Location = new System.Drawing.Point(179, 145);
+            this.errorText_LastName.Name = "errorText_LastName";
+            this.errorText_LastName.Size = new System.Drawing.Size(38, 13);
+            this.errorText_LastName.TabIndex = 17;
+            this.errorText_LastName.Text = "Label";
+            // 
+            // errorText_PickupDate
+            // 
+            this.errorText_PickupDate.AutoSize = true;
+            this.errorText_PickupDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorText_PickupDate.ForeColor = System.Drawing.Color.Red;
+            this.errorText_PickupDate.Location = new System.Drawing.Point(14, 212);
+            this.errorText_PickupDate.Name = "errorText_PickupDate";
+            this.errorText_PickupDate.Size = new System.Drawing.Size(149, 13);
+            this.errorText_PickupDate.TabIndex = 18;
+            this.errorText_PickupDate.Text = "Please enter a valid date";
+            // 
+            // errorText_PickUpTime
+            // 
+            this.errorText_PickUpTime.AutoSize = true;
+            this.errorText_PickUpTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorText_PickUpTime.ForeColor = System.Drawing.Color.Red;
+            this.errorText_PickUpTime.Location = new System.Drawing.Point(239, 210);
+            this.errorText_PickUpTime.Name = "errorText_PickUpTime";
+            this.errorText_PickUpTime.Size = new System.Drawing.Size(38, 13);
+            this.errorText_PickUpTime.TabIndex = 19;
+            this.errorText_PickUpTime.Text = "Label";
+            // 
+            // errorText_DropOffTime
+            // 
+            this.errorText_DropOffTime.AutoSize = true;
+            this.errorText_DropOffTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorText_DropOffTime.ForeColor = System.Drawing.Color.Red;
+            this.errorText_DropOffTime.Location = new System.Drawing.Point(239, 282);
+            this.errorText_DropOffTime.Name = "errorText_DropOffTime";
+            this.errorText_DropOffTime.Size = new System.Drawing.Size(38, 13);
+            this.errorText_DropOffTime.TabIndex = 20;
+            this.errorText_DropOffTime.Text = "Label";
+            // 
+            // errorText_VehicleType
+            // 
+            this.errorText_VehicleType.AutoSize = true;
+            this.errorText_VehicleType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorText_VehicleType.ForeColor = System.Drawing.Color.Red;
+            this.errorText_VehicleType.Location = new System.Drawing.Point(17, 351);
+            this.errorText_VehicleType.Name = "errorText_VehicleType";
+            this.errorText_VehicleType.Size = new System.Drawing.Size(38, 13);
+            this.errorText_VehicleType.TabIndex = 21;
+            this.errorText_VehicleType.Text = "Label";
+            // 
+            // errorText_DropOffDate
+            // 
+            this.errorText_DropOffDate.AutoSize = true;
+            this.errorText_DropOffDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorText_DropOffDate.ForeColor = System.Drawing.Color.Red;
+            this.errorText_DropOffDate.Location = new System.Drawing.Point(16, 284);
+            this.errorText_DropOffDate.Name = "errorText_DropOffDate";
+            this.errorText_DropOffDate.Size = new System.Drawing.Size(149, 13);
+            this.errorText_DropOffDate.TabIndex = 22;
+            this.errorText_DropOffDate.Text = "Please enter a valid date";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.errorText_DropOffDate);
+            this.Controls.Add(this.errorText_VehicleType);
+            this.Controls.Add(this.errorText_DropOffTime);
+            this.Controls.Add(this.errorText_PickUpTime);
+            this.Controls.Add(this.errorText_PickupDate);
+            this.Controls.Add(this.errorText_LastName);
+            this.Controls.Add(this.errorText_FirstName);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dropDown_DropOffTime);
             this.Controls.Add(this.label7);
@@ -268,6 +360,13 @@ namespace CarRentalApp {
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox dropDown_DropOffTime;
+        private System.Windows.Forms.Label errorText_FirstName;
+        private System.Windows.Forms.Label errorText_LastName;
+        private System.Windows.Forms.Label errorText_PickupDate;
+        private System.Windows.Forms.Label errorText_PickUpTime;
+        private System.Windows.Forms.Label errorText_DropOffTime;
+        private System.Windows.Forms.Label errorText_VehicleType;
+        private System.Windows.Forms.Label errorText_DropOffDate;
     }
 }
 
