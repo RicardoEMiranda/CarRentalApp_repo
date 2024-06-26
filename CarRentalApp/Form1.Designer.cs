@@ -26,21 +26,20 @@ namespace CarRentalApp {
         private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_FirstName = new System.Windows.Forms.TextBox();
+            this.textBox_LastName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.datePicker_PickupDate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.datePicker_DropOffDate = new System.Windows.Forms.DateTimePicker();
+            this.dropDown_Vehicles = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button_Submit = new System.Windows.Forms.Button();
+            this.dropDown_PickupTime = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.dropDown_DropOffTime = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -65,19 +64,19 @@ namespace CarRentalApp {
             this.label2.Text = "First Name";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
+            // textBox_FirstName
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 122);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBox_FirstName.Location = new System.Drawing.Point(16, 122);
+            this.textBox_FirstName.Name = "textBox_FirstName";
+            this.textBox_FirstName.Size = new System.Drawing.Size(156, 20);
+            this.textBox_FirstName.TabIndex = 2;
             // 
-            // textBox2
+            // textBox_LastName
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 122);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 20);
-            this.textBox2.TabIndex = 4;
+            this.textBox_LastName.Location = new System.Drawing.Point(182, 122);
+            this.textBox_LastName.Name = "textBox_LastName";
+            this.textBox_LastName.Size = new System.Drawing.Size(162, 20);
+            this.textBox_LastName.TabIndex = 4;
             // 
             // label3
             // 
@@ -89,12 +88,12 @@ namespace CarRentalApp {
             this.label3.TabIndex = 3;
             this.label3.Text = "Last Name";
             // 
-            // dateTimePicker1
+            // datePicker_PickupDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(16, 180);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 5;
+            this.datePicker_PickupDate.Location = new System.Drawing.Point(16, 180);
+            this.datePicker_PickupDate.Name = "datePicker_PickupDate";
+            this.datePicker_PickupDate.Size = new System.Drawing.Size(200, 20);
+            this.datePicker_PickupDate.TabIndex = 5;
             // 
             // label4
             // 
@@ -116,27 +115,27 @@ namespace CarRentalApp {
             this.label5.TabIndex = 8;
             this.label5.Text = "Drop Off Date / Time";
             // 
-            // dateTimePicker2
+            // datePicker_DropOffDate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(17, 235);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 7;
+            this.datePicker_DropOffDate.Location = new System.Drawing.Point(17, 235);
+            this.datePicker_DropOffDate.Name = "datePicker_DropOffDate";
+            this.datePicker_DropOffDate.Size = new System.Drawing.Size(200, 20);
+            this.datePicker_DropOffDate.TabIndex = 7;
             // 
-            // comboBox1
+            // dropDown_Vehicles
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.dropDown_Vehicles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dropDown_Vehicles.FormattingEnabled = true;
+            this.dropDown_Vehicles.Items.AddRange(new object[] {
             "Buick Encore GX XT",
             "Ford Edge",
             "Hyundai Sonata",
             "Nissan Altima",
             "Toyota Corolla"});
-            this.comboBox1.Location = new System.Drawing.Point(17, 301);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(199, 21);
-            this.comboBox1.TabIndex = 9;
+            this.dropDown_Vehicles.Location = new System.Drawing.Point(17, 301);
+            this.dropDown_Vehicles.Name = "dropDown_Vehicles";
+            this.dropDown_Vehicles.Size = new System.Drawing.Size(199, 21);
+            this.dropDown_Vehicles.TabIndex = 9;
             // 
             // label6
             // 
@@ -148,21 +147,22 @@ namespace CarRentalApp {
             this.label6.TabIndex = 10;
             this.label6.Text = "Vehicle Make/Model";
             // 
-            // button1
+            // button_Submit
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(17, 374);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 36);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Submit.Location = new System.Drawing.Point(17, 374);
+            this.button_Submit.Name = "button_Submit";
+            this.button_Submit.Size = new System.Drawing.Size(131, 36);
+            this.button_Submit.TabIndex = 11;
+            this.button_Submit.Text = "Submit";
+            this.button_Submit.UseVisualStyleBackColor = true;
+            this.button_Submit.Click += new System.EventHandler(this.button_Submit_Click);
             // 
-            // comboBox2
+            // dropDown_PickupTime
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.dropDown_PickupTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dropDown_PickupTime.FormattingEnabled = true;
+            this.dropDown_PickupTime.Items.AddRange(new object[] {
             "  7:00 AM",
             "  7:30 AM",
             "  8:00 AM",
@@ -175,10 +175,10 @@ namespace CarRentalApp {
             "11:30 AM",
             "12:00 PM",
             ""});
-            this.comboBox2.Location = new System.Drawing.Point(240, 178);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 12;
+            this.dropDown_PickupTime.Location = new System.Drawing.Point(240, 178);
+            this.dropDown_PickupTime.Name = "dropDown_PickupTime";
+            this.dropDown_PickupTime.Size = new System.Drawing.Size(121, 21);
+            this.dropDown_PickupTime.TabIndex = 12;
             // 
             // label7
             // 
@@ -200,11 +200,11 @@ namespace CarRentalApp {
             this.label8.TabIndex = 15;
             this.label8.Text = "Drop off Time";
             // 
-            // comboBox3
+            // dropDown_DropOffTime
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.dropDown_DropOffTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dropDown_DropOffTime.FormattingEnabled = true;
+            this.dropDown_DropOffTime.Items.AddRange(new object[] {
             "  7:00 AM",
             "  7:30 AM",
             "  8:00 AM",
@@ -217,40 +217,30 @@ namespace CarRentalApp {
             "11:30 AM",
             "12:00 PM",
             ""});
-            this.comboBox3.Location = new System.Drawing.Point(240, 233);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 14;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(499, 258);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "label9";
+            this.dropDown_DropOffTime.Location = new System.Drawing.Point(240, 233);
+            this.dropDown_DropOffTime.Name = "dropDown_DropOffTime";
+            this.dropDown_DropOffTime.Size = new System.Drawing.Size(121, 21);
+            this.dropDown_DropOffTime.TabIndex = 14;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.dropDown_DropOffTime);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dropDown_PickupTime);
+            this.Controls.Add(this.button_Submit);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dropDown_Vehicles);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.datePicker_DropOffDate);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.datePicker_PickupDate);
+            this.Controls.Add(this.textBox_LastName);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_FirstName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -264,21 +254,20 @@ namespace CarRentalApp {
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_FirstName;
+        private System.Windows.Forms.TextBox textBox_LastName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker datePicker_PickupDate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker datePicker_DropOffDate;
+        private System.Windows.Forms.ComboBox dropDown_Vehicles;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button_Submit;
+        private System.Windows.Forms.ComboBox dropDown_PickupTime;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox dropDown_DropOffTime;
     }
 }
 
